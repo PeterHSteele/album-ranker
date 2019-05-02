@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width='60' height='60'>
+	<circle cx='30' cy='30' r='27.5' fill='gold' stroke='rgb(168,61,18)' stroke-width='5'>
+	</circle>
+	<path y='30' d="M 0,30 L 10,30 L 15,22 L 22,45 L 38,15 L 45,38 L 50,30 L 60,30" stroke="rgb(168,61,18)" stroke-width='4' fill='gold'></path>
+</svg>

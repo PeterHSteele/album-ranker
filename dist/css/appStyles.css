@@ -1,0 +1,110 @@
+@export $colors;
+body {
+  padding: 4em 0;
+  position: relative;
+  font-family: helvetica, sans-serif;
+  background-color: #fcfcfc; }
+  body h1, body h2, body h3, body p {
+    color: #1e2226; }
+  body footer {
+    position: absolute;
+    bottom: 0;
+    left: 40%; }
+  body svg {
+    rect-fill: #b80f0a; }
+    body svg text {
+      fill: #fcfcfc; }
+    body svg rect:hover {
+      fill: #CD7F32; }
+  body nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #CD7F32;
+    border-bottom: 2px solid #1e2226; }
+    body nav li {
+      float: left;
+      margin: .5em; }
+    body nav a {
+      color: white;
+      text-decoration: none;
+      float: left;
+      margin: 0 .5em .5em; }
+    body nav a:hover {
+      text-decoration: underline; }
+    body nav img {
+      position: absolute;
+      right: 20px;
+      top: 7px; }
+  body ul {
+    padding: 0;
+    list-style: none; }
+  body .tip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+    padding: 5px; }
+  body .searchForm input:first-child {
+    width: 300px;
+    outline: none;
+    border: 1px solid #e1e4e5; }
+  body .searchForm .listBoxDiv {
+    width: 300px;
+    background: white; }
+    body .searchForm .listBoxDiv ul {
+      margin-top: 0; }
+      body .searchForm .listBoxDiv ul li:hover {
+        background: #e1e4e5; }
+      body .searchForm .listBoxDiv ul a, body .searchForm .listBoxDiv ul a:hover, body .searchForm .listBoxDiv ul a:visited {
+        text-decoration: none;
+        color: #1e2226; }
+      body .searchForm .listBoxDiv ul a {
+        display: block;
+        width: 100%; }
+  body .album {
+    position: relative;
+    padding: .5em 0;
+    border-radius: 2px; }
+    body .album h3, body .album p {
+      margin: 1em;
+      color: #fcfcfc; }
+    body .album button {
+      position: absolute;
+      right: 20px;
+      width: 50px; }
+  body #albumList {
+    padding: 1em;
+    background: #1e2226;
+    width: 50%; }
+    body #albumList li {
+      margin: 5px 0; }
+  @media (max-width: 600px) {
+    body #albumList {
+      width: 100%; } }
+  body .modalBackdrop {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    zIndex: 1; }
+  body .modalContent {
+    padding: 1em;
+    border-radius: 3px;
+    margin: 300px auto;
+    background: white;
+    width: 50%;
+    padding: 10px; }
+
+.background-gold {
+  background: gold; }
+
+.background-silver {
+  background: silver; }
+
+.background-bronze {
+  background: #CD7F32; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2Fzc2V0cy9zY3NzL3ZhcmlhYmxlcy5zY3NzIiwiLi4vLi4vYXNzZXRzL3Njc3MvYXBwU3R5bGVzLnNjc3MiLCIuLi8uLi9hc3NldHMvc2Nzcy90aGVtZUNvbG9ycy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLGVBQU87QUNJUDtFQUNFLGNBQWM7RUFDZCxrQkFBaUI7RUFDakIsa0NBUG1DO0VBUW5DLHlCQ1JxQixFQUFBO0VESXZCO0lBTU0sY0NaYyxFQUFBO0VETXBCO0lBVUksa0JBQWlCO0lBQ2pCLFNBQVE7SUFDUixTQUFRLEVBQUE7RUFaWjtJQW9CSSxrQkNuQnNCLEVBQUE7SUREMUI7TUFpQkksYUNyQm1CLEVBQUE7SURJdkI7TUF1QkksYUN6QlcsRUFBQTtFREVmO0lBNkJJLGVBQWM7SUFDZCxPQUFNO0lBQ04sTUFBSztJQUNMLFdBQVU7SUFDVixtQkNuQ1c7SURvQ1gsZ0NDeENnQixFQUFBO0lETXBCO01Bb0NLLFdBQVU7TUFDVixZQUFZLEVBQUE7SUFyQ2pCO01Bd0NNLFlBQVc7TUFDWCxxQkFBb0I7TUFDcEIsV0FBVTtNQUNWLG1CQUFtQixFQUFBO0lBM0N6QjtNQThDTSwwQkFBeUIsRUFBQTtJQTlDL0I7TUFpRE0sa0JBQWlCO01BQ2pCLFdBQVU7TUFDVixRQUFPLEVBQUE7RUFuRGI7SUF3REksVUFBUztJQUNULGdCQUFlLEVBQUE7RUF6RG5CO0lBNkRJLGtCQUFpQjtJQUNqQiw4QkFBeUI7SUFDekIsa0JBQWlCO0lBQ2pCLFlBQVc7SUFDWCxZQUFXLEVBQUE7RUFqRWY7SUFzRU0sWUF4RWU7SUF5RWYsYUFBWTtJQUNaLHlCQzNFZ0IsRUFBQTtFREd0QjtJQTJFTSxZQTdFZTtJQThFZixpQkFBZ0IsRUFBQTtJQTVFdEI7TUE4RVEsYUFBWSxFQUFBO01BOUVwQjtRQWdGVSxtQkNuRlksRUFBQTtNREd0QjtRQW1GVSxxQkFBb0I7UUFDcEIsY0MxRlUsRUFBQTtNRE1wQjtRQXVGVSxjQUFhO1FBQ2IsV0FBVSxFQUFBO0VBeEZwQjtJQStGSSxrQkFBaUI7SUFDakIsZUFBZTtJQUNmLGtCQUFpQixFQUFBO0lBakdyQjtNQW1HTSxXQUFVO01BQ1YsY0N4R2lCLEVBQUE7SURJdkI7TUF1R00sa0JBQWlCO01BQ2pCLFdBQVU7TUFDVixXQUFVLEVBQUE7RUF6R2hCO0lBOEdJLFlBQVc7SUFDWCxtQkNySGdCO0lEc0hoQixVQUFVLEVBQUE7SUFoSGQ7TUFrSE0sYUFDRixFQUFBO0VBR0Y7SUF0SEY7TUF3SE0sV0FBVSxFQUFBLEVBQ1g7RUF6SEw7SUE2SE0sOEJBQXlCO0lBQ3pCLFdBQVU7SUFDVixZQUFXO0lBQ1gsZUFBYztJQUNkLE1BQUs7SUFDTCxPQUFNO0lBQ04sU0FBUSxFQUFBO0VBbklkO0lBdUlNLFlBQVc7SUFDWCxrQkFBaUI7SUFDakIsa0JBQWlCO0lBQ2pCLGlCQUFnQjtJQUNoQixVQUFTO0lBQ1QsYUFBWSxFQUFBOztBQUlsQjtFQUNDLGdCQUFlLEVBQUE7O0FBR2hCO0VBQ0Msa0JBQWlCLEVBQUE7O0FBR2xCO0VBQ0MsbUJDM0pjLEVBQUEiLCJmaWxlIjoiYXBwU3R5bGVzLmNzcyJ9 */

@@ -1,0 +1,398 @@
+@import 'themeColors';
+@import './variables.scss';
+$theme-font:    helvetica, sans-serif;
+
+$searchBoxWidth:50%;
+
+@mixin br($rad){
+  border-radius:$rad
+}
+
+@mixin textColor($color){
+  color:$color;
+}
+
+@mixin bs($width,$height,$blur,$spread,$color){
+  box-shadow: $width $height $blur $spread $color;
+}
+
+body {
+  padding: 3.7em 0 ;
+  margin:0;
+  font-family: $theme-font;
+  background-color: $light;
+  h1, h2 ,h3,p{
+      color: $dark;
+  }
+
+  footer{
+    text-align:center;
+    position:fixed;
+    background:white;
+    bottom:0;
+    width:100%; 
+  }
+
+.main{
+  float:left;
+  width:74.5%;
+}
+
+#homepage aside{
+  width:25%;
+  border-left:2px solid $gold;
+  float:left;
+  background-color:$gray;
+  .submitButton{
+    display:block;
+    width:40%;
+    margin:20px auto 5px auto;
+  }
+  h3{
+    text-align:center;
+    background:$dark;
+    color:$gold;
+    padding:5px;
+  }
+  p{
+    color:$dark;
+    margin-left:5px;
+  }
+}
+
+svg{
+  @include bs(3px,3px,0px,2px,$dark)
+  text{
+    fill:$light;
+  }
+  rect:hover{
+    fill:$bronze;
+  }
+}
+
+  .checkBoxLabel{
+  min-width:200px;
+  }
+
+  nav{
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width:100%;
+    background:$bronze;
+    border-bottom:2px solid $dark;
+    li{
+     float:left;
+     margin: .5em; 
+    }
+    a{
+      color:white;
+      text-decoration:none;
+      float:left;
+      margin: 0 .5em .5em;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+    img{
+      position:absolute;
+      right:20px;
+      top:7px;  
+    }
+  }
+  
+  ul{
+    padding:0;
+    list-style:none;
+  }
+
+  #scoreSort:before{
+    @include br(2px);
+  }
+
+  .contentBlock{
+    margin:1.5%;
+    width:30%;
+
+  }
+
+  #homeContainer{
+    width:100%;
+  }
+
+  #homepage{
+    .contentBlock.homepageBlock{
+      float:left;
+      background:$medium;
+      padding:20px;
+      color:$light;
+      width:40%;
+      height:15em;
+      margin-bottom:10px;
+      @include bs(3px,3px,0px,2px,$dark);
+    }
+    p,h3{
+      color:$light;
+    }
+    a{
+    text-decoration:none;
+    }
+    h2{
+      padding-bottom:2px;
+      border-bottom:3px solid $light;
+    }
+    a{
+      @extend .submitButton;
+    }
+
+    .album{
+      p,h3{
+      @include textColor($dark);
+      }
+    }
+
+    .minipoll{
+      width:95%;
+      margin:0 auto;
+      /*@include bs(2px,2px,1px,1px,$dark);*/
+      padding:2px;
+      li{
+       width:70%;
+       margin:0 auto;
+       padding:4px;
+       div:first-child{
+        width:70%;
+        float:left;
+        @include br(4px);
+        text-align:left;
+        margin-bottom:5px;
+        background:$gold;
+        margin-right:10%;
+        border:2px solid $medium;
+       }
+       div{
+        width:10%;
+        float:left;
+        @include br(4px);
+        text-align:center;
+        background:$gold;
+        padding:4px;
+       }
+       div:hover{
+        background:$bronze;
+        color:$light;
+       }
+      }
+
+      li:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+     }
+  }
+
+ #homepage:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  #scoreSort{
+    background: $brown;
+    color:$light;
+    padding:.5em;
+    @include br(5px);
+    .checkbox{
+      width:20px;
+      height:20px;
+      @include br(50%);
+      display:inline-block;
+    }
+    input[type=checkbox]{
+      display:none;
+    }
+  }
+
+  #scoreSort:after{
+    @include br(6px);
+  }
+
+
+
+  .tip{
+    position:absolute;
+    background:rgba(0,0,0,.7);
+    border-radius:5px;
+    color:white;
+    padding:5px;
+  }
+
+  .searchForm{
+    width:$searchBoxWidth;
+    min-width:300px;
+    margin: auto 0;
+    input:first-child{
+      width:100%;
+      font-size:1.5em;
+      @include br(2px);
+      outline:none;
+      border:1px solid $gray;
+    }
+    .listBoxDiv{
+      width:$searchBoxWidth;
+      background:white;
+      ul{
+        margin-top:0;
+        li:hover{
+          background:$gray;
+        }
+        a,a:hover,a:visited{  
+          text-decoration:none;
+          color:$dark;
+        }
+        a{
+          display:block;
+          width:100%;
+        }
+      }
+    }
+    .submitButton{
+      display:block;
+      width:90px;
+      margin:0 auto;
+    }
+  }
+
+
+
+  .submitButton{
+    font-size:1.2em;
+    padding:.4em;
+    border:none;
+    background:$brown;
+    color:$light;
+    @include br(5px);
+  }
+
+  .submitButton:hover{
+      background:$bronze;
+  }
+
+  //
+
+  #voteLanding,#artistsLanding{
+    margin:10px;
+  }
+  
+  .album{
+    position:relative;
+    border-bottom:5px solid $dark;
+    border-radius:2px;
+    padding: .5em 0;
+    h3,span{
+      margin:0 0 0 2em;
+      @include textColor($light);
+      display:inline;
+    }
+
+    button{
+     background:$light;
+     width:50px;
+     @include br(2px);
+     border:none;
+    }
+
+    button:hover{
+      background:$medium;
+      color:$light;
+    }
+
+    .albumCol{
+      float:left;
+    }
+
+    .title{
+      width:60%;
+    }
+
+    .button,.rank{
+      width:20%;
+      min-height:1em;
+    }
+  }
+
+  .album:hover{
+    border-bottom:5px solid $light
+  }
+
+  .album:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #albumList{ 
+    padding:1em;
+    background:$dark;
+    width: 50%;
+    li{
+    
+    }
+  }
+
+  @media (max-width:700px){
+    #albumList{
+      width:100%;
+    }
+
+    #homepage .homepageBlock.contentBlock{
+      width:90%;
+      height:12em;
+    }
+
+    .main{
+      width:98%;
+      margin-bottom:5px;
+    }
+
+    #homepage aside{
+      width: 98%;
+    }
+  }
+  
+  .modalBackdrop{
+      background:rgba(0,0,0,.5);
+      width:100%;
+      height:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      zIndex:1;
+  }
+
+  .modalContent{
+      padding:1em;
+      border-radius:3px;
+      margin:300px auto;
+      background:white;
+      width:50%;
+      padding:10px;
+  }
+}
+
+.background-gold{
+	background:gold;
+}
+
+.background-silver{
+	background:silver;
+}
+
+.background-bronze{
+	background:$bronze;
+}
