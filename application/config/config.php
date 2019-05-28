@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://peterhsteele.github.io/album-ranker/';
+$config['base_url'] = 'https://peterhsteele.github.io/album-ranker/index.php';
 
 /*
 |--------------------------------------------------------------------------
